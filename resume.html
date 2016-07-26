@@ -5,16 +5,17 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
 <head>
     <style>
         html{
-            font-family: "Trebuchet MS", Helvetica, sans-serif;
-            font-size: small;
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 11px;
         }
         body{
+            background-image: url("resources/low_contrast_linen.png");
             background-color: #f3f3f3;
         }
         #main{
             width: 8in;
             margin: 10px auto;
-            border: 1px solid black;
+
             padding: 10px;
             background-color: white;
         }
@@ -58,6 +59,9 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
             display: table-cell;
             text-align: right;
         }
+        .education_location .location{
+            font-style: italic;
+        }
         .work_experience{
             width: 100%;
             margin-bottom: 10px;
@@ -75,6 +79,9 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
             display: table-cell;
             text-align: right;
         }
+        .work_experience_location .location{
+            font-style: italic;
+        }
         .work_experience_list{
             margin-top: 0px;
         }
@@ -87,14 +94,15 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
         }
         li{
             padding: 0px;
+            padding-bottom: 2px;
         }
         #skills{
             width: 100%;
         }
         #skills_table{
             width: 100%;
-            font-family: "Trebuchet MS", Helvetica, sans-serif;
-            font-size: small;
+
+            font-size: 11px;
             border: 1px solid black;
             background: -webkit-linear-gradient(#f3f3f3, #ffffff);
             background: -o-linear-gradient(#f3f3f3, #ffffff);
@@ -123,26 +131,26 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
 </head>
 <body>
     <div id="main">
+
         <h1>
             <span id="name_header">Liam Bucci</span>
         </h1>
 
-        
         <div id="personal_info">
             <div class="div_row">
                 <div id="contact_info">
                     <p>
-                    PO Box 5355<br />
-                    Irvine, CA 92616
+                        625 Guerrero St. #6<br />
+                        San Francisco, CA 94110
                     </p>
                     <p>
-                    e: <a href="mailto:liam.bucci@gmail.com?subject=Resume">liam.bucci@gmail.com</a><br />
-                    c: 818.434.9103
+                        Email: <a href="mailto:liam.bucci@gmail.com?subject=Resume">liam.bucci@gmail.com</a><br />
+                        Cell: 818.434.9103
                     </p>
                 </div>
                 <div id="online_info">
                     LinkedIn: <a href="http://www.linkedin.com/in/liambucci">linkedin.com/in/liambucci</a><br />
-                    Github: <a href="http://www.github.com/controlsfreq">github.com/controlsfreq</a><br />
+                    Github: <a href="http://www.github.com/eightdatabits">github.com/eightdatabits</a><br />
                     Web: <a href="http://www.liambucci.com/">liambucci.com</a>
                 </div>
             </div>
@@ -151,7 +159,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
         <h2>
             <span id="education_header">Education</span>
         </h2>
-        
+
         <div class="education_experience">
             <div class="div_row">
                 <div class="education_university">
@@ -159,7 +167,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                     Bachelor of Science, Mechanical Engineering
                 </div>
                 <div class="education_location">
-                    Pittsburgh, PA<br />
+                    <span class="location">Pittsburgh, PA</span><br />
                     2003-2007
                 </div>
             </div>
@@ -172,7 +180,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                     Certificate Program, Embedded Systems Engineering
                 </div>
                 <div class="education_location">
-                    Irvine, CA<br />
+                    <span class="location">Irvine, CA</span><br />
                     2011-2012
                 </div>
             </div>
@@ -186,12 +194,42 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
             <div class="work_experience_title_block">
                 <div class="div_row">
                     <div class="work_experience_employer">
+                        <span style="font-weight: bold;">Airware</span><br />
+                        Embedded Software Engineer
+                    </div>
+                    <div class="work_experience_location">
+                        <span class="location">San Francisco, CA</span><br />
+                        October 2014 - July 2016
+                    </div>
+                </div>
+            </div>
+            <div class="work_experience_content">
+                <ul class="work_experience_list">
+                    <li>Designed and programmed safety critical, embedded systems for commercial drone applications.</li>
+                    <li>Wrote application and driver code in C and C++.</li>
+                    <li>Wrote tooling, test, and build system code in Python and Make.</li>
+                    <li>Spearheaded multiple board bring-ups, starting at application design and specification through to programming, testing, and manufacturing support.</li>
+                    <li>Designed and programmed drivers for CAN, SPI, and UART sensors and peripherals.</li>
+                    <li>Made use of RTOS concurrency primitives to engineer multi-threaded systems.</li>
+                    <li>Drove initiative to reorganize and expand documentation using Doxygen, including software requirements specifications, design documents, and in-code documentation.</li>
+                    <li>Wrote functional tests, integration tests, and 100% LOC coverage unit tests as part of the definition of done for all production software.</li>
+                    <li>Collaborated with Test Automation team to run automated functional and integration tests.</li>
+                    <li>Worked on cross-functional feature teams to research, test, and solve issues.</li>
+                    <li>Worked closely with team members to continuously update standards and best practices according to lessons learned and retrospectives.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="work_experience">
+            <div class="work_experience_title_block">
+                <div class="div_row">
+                    <div class="work_experience_employer">
                         <span style="font-weight: bold;">Cognitive Anteater Robotics Laboratory, University of California Irvine</span><br />
                         Senior Development Engineer
                     </div>
                     <div class="work_experience_location">
-                        Irvine, CA<br />
-                        February 2010 - Present
+                        <span class="location">Irvine, CA</span><br />
+                        February 2010 - October 2014
                     </div>
                 </div>
             </div>
@@ -211,7 +249,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 </ul>
             </div>
         </div>
-        
+
         <div class="work_experience">
             <div class="work_experience_title_block">
                 <div class="div_row">
@@ -220,7 +258,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                         Product Engineer
                     </div>
                     <div class="work_experience_location">
-                        Sun Valley, CA<br />
+                        <span class="location">Sun Valley, CA</span><br />
                         January 2008 - June 2009
                     </div>
                 </div>
@@ -235,7 +273,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 </ul>
             </div>
         </div>
-        
+
         <div class="work_experience">
             <div class="work_experience_title_block">
                 <div class="div_row">
@@ -244,7 +282,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                         Research Assistant
                     </div>
                     <div class="work_experience_location">
-                        Pittsburgh, PA<br />
+                        <span class="location">Pittsburgh, PA</span><br />
                         Summer 2006
                     </div>
                 </div>
@@ -260,7 +298,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 </ul>
             </div>
         </div>
-        
+
         <div class="work_experience">
             <div class="work_experience_title_block">
                 <div class="div_row">
@@ -269,7 +307,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                         Electronics Installer
                     </div>
                     <div class="work_experience_location">
-                        Horsham, PA<br />
+                        <span class="location">Horsham, PA</span><br />
                         Summer 2004
                     </div>
                 </div>
@@ -281,7 +319,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 </ul>
             </div>
         </div>
-        
+
         <div class="work_experience">
             <div class="work_experience_title_block">
                 <div class="div_row">
@@ -290,7 +328,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                         Mechanic's Assistant
                     </div>
                     <div class="work_experience_location">
-                        Glenside, PA<br />
+                        <span class="location">Glenside, PA</span><br />
                         Summer 2003
                     </div>
                 </div>
@@ -302,7 +340,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 </ul>
             </div>
         </div>
-        
+
         <div class="work_experience">
             <div class="work_experience_title_block">
                 <div class="div_row">
@@ -311,7 +349,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                         Machinist's Assistant
                     </div>
                     <div class="work_experience_location">
-                        Glenside, PA<br />
+                        <span class="location">Glenside, PA</span><br />
                         Spring 2003
                     </div>
                 </div>
@@ -323,56 +361,56 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 </ul>
             </div>
         </div>
-        
+
         <h2>
             Skills
         </h2>
-        
+
         <div id="skills">
             <table id="skills_table" cellspacing="3">
                 <tr class="skills_tr">
                     <th rowspan="2" scope="col" class="skills_th">Expert</td>
-                    <td class="skills_td">C</td>
-                    <td class="skills_td">Robotics</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="skills_tr">
-                    <td class="skills_td">Solidworks</td>
-                    <td class="skills_td">CAN Bus</td>
-                    <td class="skills_td">PIC MCUs</td>
-                </tr>
-                <tr class="skills_tr">
-                    <th rowspan="2" class="skills_th">Proficient</td>
-                    <td class="skills_td">C++</td>
-                    <td class="skills_td">PCB Design</td>
-                    <td class="skills_td">Linux</td>
-                    <td class="skills_td">Qt</td>
-                    <td class="skills_td">MS Office</td>
-                </tr>
-                <tr class="skills_tr">
-                    <td class="skills_td">Bash Script</td>
-                    <td class="skills_td">Git</td>
-                    <td class="skills_td">SVN</td>
-                    <td class="skills_td">OS X</td>
-                    <td class="skills_td">Windows</td>
-                </tr>
-                <tr class="skills_tr">
-                    <th rowspan="2" class="skills_th" style="border-bottom-width: 0px;">Familiar</td>
-                    <td class="skills_td">ARM Cortex-M</td>
-                    <td class="skills_td">Matlab</td>
-                    <td class="skills_td">Java</td>
-                    <td class="skills_td">Amazon EC2</td>
-                </tr>
-                <tr class="skills_tr">
-                    <td class="skills_td">Python</td>
-                    <td class="skills_td">Atmel AVR</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</body>
-<html>
+                        <td class="skills_td">C</td>
+                        <td class="skills_td">C++</td>
+                        <td class="skills_td">ARM Cortex-M</td>
+                        <td class="skills_td">Robotics</td>
+                        <td class="skills_td">Doxygen</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="skills_tr">
+                        <td class="skills_td">Git</td>
+                        <td class="skills_td">Make</td>
+                        <td class="skills_td">uC/OS-II</td>
+                        <td class="skills_td">CppUTest</td>
+                        <td class="skills_td">CAN Bus</td>
+                        <td class="skills_td">PIC MCUs</td>
+                    </tr>
+                    <tr class="skills_tr">
+                        <th rowspan="2" class="skills_th">Proficient</td>
+                            <td class="skills_td">Python</td>
+                            <td class="skills_td">PCB Design</td>
+                            <td class="skills_td">Linux Admin</td>
+                            <td class="skills_td">Qt</td>
+                            <td class="skills_td">MS Office</td>
+                        </tr>
+                        <tr class="skills_tr">
+                            <td class="skills_td">Bash Script</td>
+                            <td class="skills_td">Solidworks</td>
+                            <td class="skills_td">SVN</td>
+                            <td class="skills_td">GNSS</td>
+                        </tr>
+                        <tr class="skills_tr">
+                            <th rowspan="2" class="skills_th" style="border-bottom-width: 0px;">Familiar</td>
+                                <td class="skills_td">Matlab</td>
+                                <td class="skills_td">Java</td>
+                                <td class="skills_td">Amazon EC2</td>
+                            </tr>
+                            <tr class="skills_tr">
+                                <td class="skills_td">Atmel AVR</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </body>
+            <html>
