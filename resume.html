@@ -1,416 +1,508 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <!-- If you are reading this, please open this file in a browser. It was designed for Chrome,
 but may also be viewed in Firefox and (less optimally) in Internet Explorer.
 If you have trouble viewing this document you may visit www.liambucci.com to view it online. -->
+
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Rokkitt:wght@100;200;300;400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
   <style>
-  html{
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 11px;
-  }
-  body{
-    background-image: url("resources/low_contrast_linen.png");
-    background-color: #f3f3f3;
-  }
-  #main{
-    width: 8in;
-    margin: 10px auto;
+    /*
+    @font-face {
+      font-family: 'Josefin Sans';
+      font-style: normal;
+      src: url("resources/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+    }
 
-    padding: 10px;
-    background-color: white;
-  }
-  h1{
-    margin-top: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid gray;
-    margin-bottom: 10px;
-  }
-  .div_row{
-    width: 100%;
-    display: table-row;
-  }
-  #personal_info{
-    width: 100%;
-    display: table;
-  }
-  #contact_info{
-    width: 50%;
-    display: table-cell;
-  }
-  #online_info{
-    display: table-cell;
-    text-align: right;
-  }
-  h2{
-    padding-bottom: 5px;
-    border-bottom: 1px solid gray;
-    margin-bottom: 10px;
-  }
-  .education_experience{
-    width: 100%;
-    display: table;
-    margin-bottom: 10px;
-  }
-  .education_university{
-    width: 70%;
-    display: table-cell;
-  }
-  .education_location{
-    display: table-cell;
-    text-align: right;
-  }
-  .education_location .location{
-    font-style: italic;
-  }
-  .work_experience{
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .work_experience_title_block{
-    width: 100%;
-    display: table;
-    margin-bottom: 5px;
-  }
-  .work_experience_employer{
-    width: 70%;
-    display: table-cell;
-  }
-  .work_experience_location{
-    display: table-cell;
-    text-align: right;
-  }
-  .work_experience_location .location{
-    font-style: italic;
-  }
-  .work_experience_list{
-    margin-top: 0px;
-  }
-  ul{
-    list-style-type: circle;
-    padding: 0px;
-    margin-left: 30px;
-    margin-right: 30px;
-    text-align: justify;
-  }
-  li{
-    padding: 0px;
-    padding-bottom: 2px;
-  }
-  #skills{
-    width: 100%;
-  }
-  #skills_table{
-    width: 100%;
+    @font-face {
+      font-family: 'Lora';
+      font-style: normal;
+      src: url("resources/Lora/Lora-VariableFont_wght.ttf");
+    }
 
-    font-size: 11px;
-    border: 1px solid black;
-    background: -webkit-linear-gradient(#f3f3f3, #ffffff);
-    background: -o-linear-gradient(#f3f3f3, #ffffff);
-    background: -moz-linear-gradient(#f3f3f3, #ffffff);
-    background: linear-gradient(#f3f3f3, #ffffff);
-  }
-  .skills_th{
-    width: 12%;
-    max-width: 12%;
-  }
-  .skills_tr{
-    width: 100%;
-    border: 1px solid black;
-    display: table-row;
-  }
-  .skills_td{
-    width: 12%;
-    max-width: 12%;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-  }
+    @font-face {
+      font-family: 'Lora';
+      font-style: italic;
+      src: url("resources/Lora/Lora-Italic-VariableFont_wght.ttf");
+    }
+
+    @font-face {
+      font-family: 'Lora Bold';
+      font-style: normal;
+      src: url("resources/Lora/static/Lora-Bold.ttf");
+    }*/
+
+    html {
+      font-family: 'Roboto Slab', serif;
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    body {
+      background-image: url("resources/5016.png");
+      /*background-size: cover;*/
+      background-size: 200px;
+      background-color: darkgray;
+    }
+/*
+    * {
+      border-style: solid;
+      border-width: 1px;
+      border-color: black;
+    }
+*/
+    h2 {
+      padding-bottom: 5px;
+      border-bottom: 1px solid gray;
+      margin-bottom: 10px;
+    }
+
+    #main {
+      max-width: 8.5in;
+      margin: 10px auto;
+      background-color: white;
+    }
+
+    #name_block {
+      background-color: #153e80;
+      padding: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    #name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 32pt;
+      font-weight: 700;
+      color: #fafcff;
+    }
+
+    #title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12pt;
+      color: #fafcff;
+      padding-left: 2px;
+    }
+
+    #content {
+      display: flex;
+      align-items: stretch;
+    }
+
+    #left_panel {
+      flex: 1;
+      padding: 10px;
+    }
+
+    #right_panel {
+      width: 180px;
+      background-color: #e2edff;
+      padding: 10px;
+    }
+
+    #summary {
+      font-size: 13px;
+    }
+
+    .work_experience_item {
+      display: flex;
+    }
+
+    .work_experience_dates {
+      width: 80px;
+      color: rgb(121, 121, 121);
+    }
+
+    .work_experience_content {
+      flex: 1;
+    }
+
+    .work_experience_item {
+      margin-bottom: 10px;
+    }
+
+    .work_experience_item:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    .work_experience_heading {
+      padding-bottom: 4px;
+    }
+
+    .work_experience_company_name {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .work_experience_company_location {
+      font-style: italic;
+      float: right;
+    }
+
+    .work_experience_key_tech_title {
+      font-weight: 500;
+    }
+
+    .key_tech_list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .key_tech_list li {
+      float: left;
+      margin: 2px;
+      padding: 0px 4px;
+      background-color: #878d99;
+      color: white;
+      border-radius: 3px;
+    }
+
+    .work_experience_resp_ach {
+      font-weight: 500;
+    }
+
+    .work_experience_description {
+      margin-top: 2px;
+      margin-bottom: 2px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .work_experience_description ul {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .education_item {
+      display: flex;
+      padding-bottom: 10px;
+    }
+
+    .education_item:last-of-type {
+      padding-bottom: 20px;
+    }
+
+    .education_left {
+      flex: 1;
+    }
+
+    .education_right {
+      flex: 1;
+      text-align: right;
+    }
+
+    .education_school {
+      font-weight: bold;
+    }
+
+    .education_location {
+      font-style: italic;
+    }
+
+    .personal_info_item {
+      display: flex;
+      align-items: center;
+      height: fit-content;
+      padding: 2px;
+    }
+
+    .personal_info_icon {
+      margin-right: 4px;
+    }
+
+    #personal_info_divider {
+      width: 100px;
+    }
   </style>
 </head>
+
 <body>
   <div id="main">
-
-    <h1>
-      <span id="name_header">Liam Bucci</span>
-    </h1>
-
-    <div id="personal_info">
-      <div class="div_row">
-        <div id="contact_info">
-          <p>
-            625 Guerrero St. #6<br />
-            San Francisco, CA 94110
-          </p>
-          <p>
-            Email: <a href="mailto:liam.bucci@gmail.com?subject=Resume">liam.bucci@gmail.com</a><br />
-            Cell: 818.434.9103
-          </p>
+    <div id="name_block">
+      <span id="name">Liam Bucci</span><br />
+      <span id="title">Embedded Software Engineer</span>
+    </div>
+    <div id="content">
+      <div id="left_panel">
+        <div id="summary">
+          The challenges of creating new and innovative solutions to complex problems has been a constant motivator in my life; it is why I became an engineer. Robotic systems, in particular, with their complex physics, multitude of interacting systems, and ability to greatly impact the world are some of the most interesting challenges I've ever encountered. And I am excited to tackle those challenges each and every day.
         </div>
-        <div id="online_info">
-          LinkedIn: <a href="http://www.linkedin.com/in/liambucci">linkedin.com/in/liambucci</a><br />
-          Github: <a href="http://www.github.com/eightdatabits">github.com/eightdatabits</a><br />
-          Web: <a href="http://www.liambucci.com/">liambucci.com</a>
+        <div id="work_experience">
+          <h2>
+            Work Experience
+          </h2>
+          <div class="work_experience_item">
+            <div class="work_experience_dates">
+               Present - <br />
+               June 2020
+            </div>
+            <div class="work_experience_content">
+              <div class="work_experience_heading">
+                <span class="work_experience_company_name">Cruise</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
+                <span class="work_experience_title">Senior Staff Software Engineer</span>
+              </div>
+              <div class="work_experience_details">
+                <div class="work_experience_key_tech">
+                  <span class="work_experience_key_tech_title">Key Technologies</span>
+                  <ul class="key_tech_list">
+                    <li>C++17</li>
+                    <li>ARM Cortex A53</li>
+                    <li>ARM Cortex R5</li>
+                    <li>GHS u-velOSity</li>
+                    <li>ISO 26262</li>
+                  </ul>
+                </div>
+                <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
+                <ul class="work_experience_description">
+                  <li>Worked across multiple teams to define and implement safety processes and standards, design and review software architectures, and set future direction to meet safety requirements for autonomous vehicles.</li>
+                  <li>Worked closely with the Safety team to develop and drive adoption of a Cruise-wide high assurance software development process, based off of ISO 26262 Part 6.</li>
+                  <ul>
+                    <li>Developed a coding standard for safety-critical embedded software.</li>
+                    <li>Developed a new documentation strategy and templates which fulfill safety requirements and provide simple, manageable documentation for important design information, leading to improved communication and faster project onboarding.</li>
+                  </ul>
+                  <li>Owned initial bring-up and planning for the system's "root of safety" processor, which housed many of the core safety-related functions in the vehicle.</li>
+                  <ul>
+                    <li>Led a benchmarking effort working with various teams to determine if using a lower cost, earlier timeline processor variant was feasible.</li>
+                  </ul>
+                  <li>Led evaluatation of several safety certified RTOSes and documented our findings, including proposing both a microcontroller and application processor RTOS. Executed purchase of the microcontroller RTOS which now supports multiple devices.</li>
+                  <li>Reviewed the safety architecture and design of several embedded devices &mdash; including doing Failure Modes and Effects Analyses (FMEA) &mdash; and made recommendations for software/hardware changes which saved on costly redesigns.</li>
+                  <li>Led the effort to plan and execute a workshop which aimed to align on and develop a more functionally safe software architecture for the core driving stack.</li>
+                  <ul>
+                    <li>Resulted in creation of a widely cross-functional architecture working group to further develop and align on a safety architecture.</li>
+                  </ul>
+                  <li>Assisted FuSa team by owning safety analysis of several functions in the system-level functional architecture, which was later used to analyze functional safety of the system, develop technical safety concepts, and drive requirements down into individual components.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="work_experience_item">
+            <div class="work_experience_dates">
+               June 2020 - <br />
+               Oct 2016
+            </div>
+            <div class="work_experience_content">
+              <div class="work_experience_heading">
+                <span class="work_experience_company_name">Zoox</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
+                <span class="work_experience_title">Senior Staff Software Engineer</span>
+              </div>
+              <div class="work_experience_details">
+                <div class="work_experience_key_tech">
+                  <span class="work_experience_key_tech_title">Key Technologies</span>
+                  <ul class="key_tech_list">
+                    <li>C++11</li>
+                    <li>ARM Cortex A53</li>
+                    <li>ARM Cortex M4</li>
+                    <li>NXP PowerPC</li>
+                    <li>QNX</li>
+                    <li>FreeRTOS</li>
+                    <li>CAN</li>
+                    <li>DDS Pub-Sub</li>
+                    <li>Make</li>
+                    <li>Bazel</li>
+                  </ul>
+                </div>
+                <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
+                <ul class="work_experience_description">
+                  <li>Architected, designed, and programmed safety-critical embedded software for autonomous vehicles.</li>
+                  <li>Set technical direction within the team and served as a technical advisor and contributor on projects both within
+                    Firmware and cross-functionally.</li>
+                  <ul>
+                    <li>Authored and rolled out team-wide guidelines and standards on multiple topics, including software design and
+                      architecture, documentation, code review, and testing.</li>
+                    <li>Developed middleware, application frameworks, infrastructure, and testing tools and patterns to help encourage
+                      guidelines and standards adherence.</li>
+                    <li>Acted as a key contributor to the development of a Zoox-wide high assurance software development process based on
+                      ISO 26262, including defining a C++11 coding standard (based on AUTOSAR C++14), owning static analysis tool
+                      evaluation and selection, and developing documentation processes and templates.</li>
+                    <li>Served as a champion of strong testing and development practices.</li>
+                  </ul>
+                  <li>Helped build the team from 2 to over 40.</li>
+                  <ul>
+                    <li>Served as a key interviewer and developed several interview questions.</li>
+                    <li>Mentored multiple junior developers, most of whom went on to successful roles within the team.</li>
+                    <li>Started and owned a biweekly Lunch & Learn meeting to improve communication both within the team and with adjacent
+                      teams.</li>
+                  </ul>
+                  <li>Worked closely with highly cross-functional teams to define both the hardware and software architecture of a high
+                    performance, safety critical embedded system which monitors the autonomous driving stack and provides an interface to control the vehicle.
+                  </li>
+                  <li>Designed and developed embedded software for a safety critical, low level monitor on a microcontroller to ensure safe public roads
+                    operation of a supervised level 3 autonomous test vehicle.</li>
+                  <ul>
+                    <li>System ran for years with minimal maintenance or updates and enabled hundreds of thousands of safe vehicle testing
+                      miles.</li>
+                  </ul>
+                  <li>Designed and developed an OS Abstraction Layer (OSAL) in C++ which improved portability, testability, and safety of
+                    all embedded applications and supported multiple OSs.</li>
+                  <li>Designed and developed a logging library and API which enabled portable and configurable logging across x86,
+                    application processor, and microcontroller platforms.</li>
+                  <li>Designed and developed an Inter-Process Communication (IPC) pub-sub framework and abstraction layer which was
+                    adopted in all embedded devices and enabled more modular and testable designs.</li>
+                  <li>Developed multiple shared C++ utility classes/functions and containers to meet safety, real-time, and constrained
+                    memory requirements.</li>
+                  <li>Served as key developer and maintainer of a <code>make</code>-based build system which supported multiple target
+                    devices and their associated libraries, RTOSes, toolchains, and CI.</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="work_experience_item">
+            <div class="work_experience_dates">
+               July 2016 - <br />
+               Oct 2014
+            </div>
+            <div class="work_experience_content">
+              <div class="work_experience_heading">
+                <span class="work_experience_company_name">Airware</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
+                <span class="work_experience_title">Senior Staff Software Engineer</span>
+              </div>
+              <div class="work_experience_details">
+                <div class="work_experience_key_tech">
+                  <span class="work_experience_key_tech_title">Key Technologies</span>
+                  <ul class="key_tech_list">
+                    <li>C++</li>
+                    <li>ARM Cortex A</li>
+                    <li>ARM Cortex M</li>
+                    <li>RTOS</li>
+                  </ul>
+                </div>
+                <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
+                <ul class="work_experience_description">
+                  <li>Designed and programmed safety critical, embedded systems for commercial drone applications.</li>
+                  <li>Wrote application and driver code in C and C++.</li>
+                  <li>Wrote tooling, test, and build system code in Python and Make.</li>
+                  <li>Spearheaded multiple board bring-ups, starting at application design and specification through to programming,
+                    testing, and manufacturing support.</li>
+                  <li>Designed and programmed drivers for CAN, SPI, and UART sensors and peripherals.</li>
+                  <li>Made use of RTOS concurrency primitives to engineer multi-threaded systems.</li>
+                  <li>Drove initiative to reorganize and expand documentation using Doxygen, including software requirements
+                    specifications, design documents, and in-code documentation.</li>
+                  <li>Wrote functional tests, integration tests, and 100% LOC coverage unit tests as part of the definition of done for
+                    all production software.</li>
+                  <li>Collaborated with Test Automation team to run automated functional and integration tests.</li>
+                  <li>Worked on cross-functional feature teams to research, test, and solve issues.</li>
+                  <li>Worked closely with team members to continuously update standards and best practices according to lessons learned
+                    and retrospectives.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="work_experience_item">
+            <div class="work_experience_dates">
+               Oct 2014 - <br />
+               Feb 2010
+            </div>
+            <div class="work_experience_content">
+              <div class="work_experience_heading">
+                <span class="work_experience_company_name">Cognitive Anteater Robotics Laboratory, UC Irvine</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
+                <span class="work_experience_title">Senior Staff Software Engineer</span>
+              </div>
+              <div class="work_experience_details">
+                <div class="work_experience_key_tech">
+                  <span class="work_experience_key_tech_title">Key Technologies</span>
+                  <ul class="key_tech_list">
+                    <li>C++</li>
+                    <li>ARM Cortex A</li>
+                    <li>ARM Cortex M</li>
+                    <li>RTOS</li>
+                  </ul>
+                </div>
+                <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
+                <ul class="work_experience_description">
+                  <li>Designed, built, and maintained robots and electronics used for computational neuroscience research.</li>
+                  <li>Worked with graduate students and faculty to meet their research needs.</li>
+                  <li>Tracked and maintained parts inventory, purchase orders, reimbursements, and component and part libraries.</li>
+                  <li>Took on the role of system administrator of the lab server, including maintaining Subversion (SVN), MediaWiki, and
+                    Bugzilla installations, granting user access, and installing updates and fixes.</li>
+                  <li>Designed custom mechanical components and assemblies using Solidworks CAD software. Components and assemblies were
+                    specified in drawings for precision machining or hand built for one-off testing and prototyping.</li>
+                  <li>Designed custom printed circuit boards (PCBs) and built and/or ordered printed circuit assemblies (PCAs). Boards
+                    were designed to meet size, cost, and functional specifications for each project.</li>
+                  <li>Programmed and tested firmware for 8-bit and 16-bit PIC microcontrollers, including code for motor control, sensor
+                    integration, and communication.</li>
+                  <li>Programmed and tested software for Windows, Mac, and Linux PCs which interfaced with both custom and off-the-shelf
+                    hardware.</li>
+                  <li>Built, installed, and maintained custom embedded Linux installations.</li>
+                  <li>Gave quarterly presentations to the lab on the current status of on-going projects as well as a range of research
+                    subjects including reviews of papers in the fields of neuroscience, computer science, and robotics.</li>
+                  <li>Collaborated with other lab members to solve a range of problems and brainstorm new concepts for robots and research
+                    avenues.</li>      </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="education">
+          <h2>
+            Education
+          </h2>
+          <div class="education_item">
+            <div class="education_left">
+              <span class="education_school">Carnegie Mellon University</span><br />
+              <span class="education_degree">Bachelor of Science, Mechanical Engineering</span>
+            </div>
+            <div class="education_right">
+              <span class="education_location">Pittsburgh, PA</span><br />
+              <span class="education_dates">2003-2007</span>
+            </div>
+          </div>
+          <div class="education_item">
+            <div class="education_left">
+              <span class="education_school">University of California, Irvine (Extension)</span><br />
+              <span class="education_degree">Certificate Program, Embedded Systems Engineering</span>
+            </div>
+            <div class="education_right">
+              <span class="education_location">Irvine, CA</span><br />
+              <span class="education_dates">2011-2012</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="right_panel">
+        <div id="personal_info">
+          <h2>
+            Personal Info
+          </h2>
+          <div class="personal_info_item">
+            <span class="personal_info_icon"><img src="resources/place_black_24dp.svg" height=16px></span>
+            <span class="personal_info_details">
+                1602 Silver Ave<br />
+                Redwood City, CA 94061
+            </span>
+          </div>
+          <div class="personal_info_item">
+            <span class="personal_info_icon"><img src="resources/email_black_24dp.svg" height=16px></span>
+            <span class="personal_info_details"><a href="mailto:liam@eightdatabits.com?subject=Resume">liam@eightdatabits.com</a></span>
+          </div>
+          <div class="personal_info_item">
+            <span class="personal_info_icon"><img src="resources/call_black_24dp.svg" height=16px></span>
+            <span class="personal_info_details">818.434.9103</span>
+          </div>
+          <br />
+          <div class="personal_info_item">
+            <span class="personal_info_icon"><img src="resources/LI-In-Bug.png" height=16px></span>
+            <span class="personal_info_details"><a href="http://www.linkedin.com/in/liambucci">linkedin.com/in/liambucci</a></span>
+          </div>
+          <div class="personal_info_item">
+            <span class="personal_info_icon"><img src="resources/GitHub-Mark-32px.png" height=16px></span>
+            <span class="personal_info_details"><a href="http://www.github.com/eightdatabits">github.com/eightdatabits</a></span>
+          </div>
+          <div class="personal_info_item">
+            <span class="personal_info_icon"><img src="resources/language_black_24dp.svg" height=16px></span>
+            <span class="personal_info_details"><a href="http://www.liambucci.com/">liambucci.com</a></span>
+          </div>
+        </div>
+        <div id="skills">
+          <h2>
+            Skills
+          </h2>
         </div>
       </div>
     </div>
-
-    <h2>
-      <span id="education_header">Education</span>
-    </h2>
-
-    <div class="education_experience">
-      <div class="div_row">
-        <div class="education_university">
-          <span style="font-weight: bold;">Carnegie Mellon University</span><br />
-          Bachelor of Science, Mechanical Engineering
-        </div>
-        <div class="education_location">
-          <span class="location">Pittsburgh, PA</span><br />
-          2003-2007
-        </div>
-      </div>
-    </div>
-
-    <div class="education_experience">
-      <div class="div_row">
-        <div class="education_university">
-          <span style="font-weight: bold;">University of California, Irvine (Extension)</span><br />
-          Certificate Program, Embedded Systems Engineering
-        </div>
-        <div class="education_location">
-          <span class="location">Irvine, CA</span><br />
-          2011-2012
-        </div>
-      </div>
-    </div>
-
-    <h2>
-      <span id="work_experience_header">Work Experience</span>
-    </h2>
-
-    <div class="work_experience">
-      <div class="work_experience_title_block">
-        <div class="div_row">
-          <div class="work_experience_employer">
-            <span style="font-weight: bold;">Airware</span><br />
-            Embedded Software Engineer
-          </div>
-          <div class="work_experience_location">
-            <span class="location">San Francisco, CA</span><br />
-            October 2014 - July 2016
-          </div>
-        </div>
-      </div>
-      <div class="work_experience_content">
-        <ul class="work_experience_list">
-          <li>Designed and programmed safety critical, embedded systems for commercial drone applications.</li>
-          <li>Wrote application and driver code in C and C++.</li>
-          <li>Wrote tooling, test, and build system code in Python and Make.</li>
-          <li>Spearheaded multiple board bring-ups, starting at application design and specification through to programming, testing, and manufacturing support.</li>
-          <li>Designed and programmed drivers for CAN, SPI, and UART sensors and peripherals.</li>
-          <li>Made use of RTOS concurrency primitives to engineer multi-threaded systems.</li>
-          <li>Drove initiative to reorganize and expand documentation using Doxygen, including software requirements specifications, design documents, and in-code documentation.</li>
-          <li>Wrote functional tests, integration tests, and 100% LOC coverage unit tests as part of the definition of done for all production software.</li>
-          <li>Collaborated with Test Automation team to run automated functional and integration tests.</li>
-          <li>Worked on cross-functional feature teams to research, test, and solve issues.</li>
-          <li>Worked closely with team members to continuously update standards and best practices according to lessons learned and retrospectives.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work_experience">
-      <div class="work_experience_title_block">
-        <div class="div_row">
-          <div class="work_experience_employer">
-            <span style="font-weight: bold;">Cognitive Anteater Robotics Laboratory, University of California Irvine</span><br />
-            Senior Development Engineer
-          </div>
-          <div class="work_experience_location">
-            <span class="location">Irvine, CA</span><br />
-            February 2010 - October 2014
-          </div>
-        </div>
-      </div>
-      <div class="work_experience_content">
-        <ul class="work_experience_list">
-          <li>Designed, built, and maintained robots and electronics used for computational neuroscience research.</li>
-          <li>Worked with graduate students and faculty to meet their research needs.</li>
-          <li>Tracked and maintained parts inventory, purchase orders, reimbursements, and component and part libraries.</li>
-          <li>Took on the role of system administrator of the lab server, including maintaining Subversion (SVN), MediaWiki, and Bugzilla installations, granting user access, and installing updates and fixes.</li>
-          <li>Designed custom mechanical components and assemblies using Solidworks CAD software. Components and assemblies were specified in drawings for precision machining or hand built for one-off testing and prototyping.</li>
-          <li>Designed custom printed circuit boards (PCBs) and built and/or ordered printed circuit assemblies (PCAs). Boards were designed to meet size, cost, and functional specifications for each project.</li>
-          <li>Programmed and tested firmware for 8-bit and 16-bit PIC microcontrollers, including code for motor control, sensor integration, and communication.</li>
-          <li>Programmed and tested software for Windows, Mac, and Linux PCs which interfaced with both custom and off-the-shelf hardware.</li>
-          <li>Built, installed, and maintained custom embedded Linux installations.</li>
-          <li>Gave quarterly presentations to the lab on the current status of on-going projects as well as a range of research subjects including reviews of papers in the fields of neuroscience, computer science, and robotics.</li>
-          <li>Collaborated with other lab members to solve a range of problems and brainstorm new concepts for robots and research avenues.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work_experience">
-      <div class="work_experience_title_block">
-        <div class="div_row">
-          <div class="work_experience_employer">
-            <span style="font-weight: bold;">WET Design</span><br />
-            Product Engineer
-          </div>
-          <div class="work_experience_location">
-            <span class="location">Sun Valley, CA</span><br />
-            January 2008 - June 2009
-          </div>
-        </div>
-      </div>
-      <div class="work_experience_content">
-        <ul class="work_experience_list">
-          <li>Worked closely with a team to take products for architectural fountains from concept to installation, including the Burj Dubai and the City Center in Las Vegas.</li>
-          <li>Purchased or engineered parts to make the most cost effective use of production capabilities including water jet, laser, punch press, press brake, lathe and mill, and welding.</li>
-          <li>Engineered many aspects of the Oarsman, Ribbon Nozzle, and analog nozzle, including bearings, high tolerance parts, sheet metal bends, welding fixtures, castings, and linkages.</li>
-          <li>Engineered devices for harsh environments such as brominated, chlorinated and salt water, dirty or sandy water, and water up to 120&deg;F.</li>
-          <li>Worked with vendors and suppliers to get part specifications and lead times.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work_experience">
-      <div class="work_experience_title_block">
-        <div class="div_row">
-          <div class="work_experience_employer">
-            <span style="font-weight: bold;">Carnegie Mellon Institute for Complex Engineered Systems</span><br />
-            Research Assistant
-          </div>
-          <div class="work_experience_location">
-            <span class="location">Pittsburgh, PA</span><br />
-            Summer 2006
-          </div>
-        </div>
-      </div>
-      <div class="work_experience_content">
-        <ul class="work_experience_list">
-          <li>Developed algorithms to analyze abdominal aortic aneurysms (AAA) and generate 3D models of the aneurysms for stent design and customization.</li>
-          <li>Used MATLABs image processing toolbox to manipulate and segment CT scans.</li>
-          <li>Designed and programmed user interfaces in MATLAB for ease of use and automatic processing of images.</li>
-          <li>Experimented with MATLAB Neural Network toolbox.</li>
-          <li>Created 3D models for import into Fluent for fluid flow analysis.</li>
-          <li>Worked in a team to develop and refine code, manage projects, and build a wiki to serve as program manual and provide code.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work_experience">
-      <div class="work_experience_title_block">
-        <div class="div_row">
-          <div class="work_experience_employer">
-            <span style="font-weight: bold;">Good Vibrations Auto Salon</span><br />
-            Electronics Installer
-          </div>
-          <div class="work_experience_location">
-            <span class="location">Horsham, PA</span><br />
-            Summer 2004
-          </div>
-        </div>
-      </div>
-      <div class="work_experience_content">
-        <ul class="work_experience_list">
-          <li>Designed, built, and installed custom high-end automotive audio/video systems, and performance components to suit customers' needs.</li>
-          <li>Installed Pennsylvania court-mandated DUI breathalysers and processed paperwork to ensure full compliance with state requirements.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work_experience">
-      <div class="work_experience_title_block">
-        <div class="div_row">
-          <div class="work_experience_employer">
-            <span style="font-weight: bold;">Santilli's Automotive Transmission Specialists</span><br />
-            Mechanic's Assistant
-          </div>
-          <div class="work_experience_location">
-            <span class="location">Glenside, PA</span><br />
-            Summer 2003
-          </div>
-        </div>
-      </div>
-      <div class="work_experience_content">
-        <ul class="work_experience_list">
-          <li>Assisted mechanics in installation of new transmissions and clutches.</li>
-          <li>Assisted mechanics or worked individually to repair general automotive issues.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="work_experience">
-      <div class="work_experience_title_block">
-        <div class="div_row">
-          <div class="work_experience_employer">
-            <span style="font-weight: bold;">East Coast Automotive Machining</span><br />
-            Machinist's Assistant
-          </div>
-          <div class="work_experience_location">
-            <span class="location">Glenside, PA</span><br />
-            Spring 2003
-          </div>
-        </div>
-      </div>
-      <div class="work_experience_content">
-        <ul class="work_experience_list">
-          <li>Disassembled engines and machined valves.</li>
-          <li>Glass-beaded and prepared parts for machining.</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>
-      Skills
-    </h2>
-
-    <div id="skills">
-      <table id="skills_table" cellspacing="3">
-        <tr class="skills_tr">
-          <th rowspan="2" scope="col" class="skills_th">Expert</td>
-            <td class="skills_td">C</td>
-            <td class="skills_td">C++</td>
-            <td class="skills_td">ARM Cortex-M</td>
-            <td class="skills_td">Robotics</td>
-            <td class="skills_td">Doxygen</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="skills_tr">
-            <td class="skills_td">Git</td>
-            <td class="skills_td">Make</td>
-            <td class="skills_td">uC/OS-II</td>
-            <td class="skills_td">CppUTest</td>
-            <td class="skills_td">CAN Bus</td>
-            <td class="skills_td">PIC MCUs</td>
-          </tr>
-          <tr class="skills_tr">
-            <th rowspan="2" class="skills_th">Proficient</td>
-              <td class="skills_td">Python</td>
-              <td class="skills_td">PCB Design</td>
-              <td class="skills_td">Linux Admin</td>
-              <td class="skills_td">Qt</td>
-              <td class="skills_td">MS Office</td>
-            </tr>
-            <tr class="skills_tr">
-              <td class="skills_td">Bash Script</td>
-              <td class="skills_td">Solidworks</td>
-              <td class="skills_td">SVN</td>
-              <td class="skills_td">GNSS</td>
-            </tr>
-            <tr class="skills_tr">
-              <th rowspan="2" class="skills_th" style="border-bottom-width: 0px;">Familiar</td>
-                <td class="skills_td">Matlab</td>
-                <td class="skills_td">Java</td>
-                <td class="skills_td">Amazon EC2</td>
-              </tr>
-              <tr class="skills_tr">
-                <td class="skills_td">Atmel AVR</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </body>
-      <html>
+  </div>
+</body>
+<html>
