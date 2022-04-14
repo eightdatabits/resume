@@ -36,7 +36,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
     }*/
 
     html {
-      font-family: 'Roboto Slab', serif;
+      font-family: Verdana, 'Roboto Slab', serif;
       font-size: 12px;
       font-weight: 300;
     }
@@ -175,7 +175,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
 
     .work_experience_description ul {
       padding-left: 20px;
-      padding-right: 20px;
+      padding-right: 0px;
     }
 
     .education_item {
@@ -218,6 +218,23 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
     #personal_info_divider {
       width: 100px;
     }
+
+    .skill_item {
+      margin-bottom: 15px;
+    }
+
+    .skill_name {
+      font-weight: 500;
+    }
+
+    .skill_rating {
+      float: right;
+    }
+
+    .skill_rating_desc {
+      display: block;
+      text-align: right;
+    }
   </style>
 </head>
 
@@ -230,7 +247,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
     <div id="content">
       <div id="left_panel">
         <div id="summary">
-          The challenges of creating new and innovative solutions to complex problems has been a constant motivator in my life; it is why I became an engineer. Robotic systems, in particular, with their complex physics, multitude of interacting systems, and ability to greatly impact the world are some of the most interesting challenges I've ever encountered. And I am excited to tackle those challenges each and every day.
+          The challenges of creating new and innovative solutions to complex problems has been a constant motivator in my life; it is why I became an engineer. Robotic systems, in particular, with their complex physics, multitude of interacting systems, and ability to greatly impact the world are some of the most interesting challenges I've ever encountered, and I am excited to tackle those challenges each and every day.
         </div>
         <div id="work_experience">
           <h2>
@@ -251,26 +268,26 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                   <span class="work_experience_key_tech_title">Key Technologies</span>
                   <ul class="key_tech_list">
                     <li>C++17</li>
+                    <li>C99</li>
                     <li>ARM Cortex A53</li>
                     <li>ARM Cortex R5</li>
                     <li>GHS u-velOSity</li>
                     <li>ISO 26262</li>
+                    <li>Git</li>
+                    <li>Bazel</li>
                   </ul>
                 </div>
                 <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
                 <ul class="work_experience_description">
-                  <li>Worked across multiple teams to define and implement safety processes and standards, design and review software architectures, and set future direction to meet safety requirements for autonomous vehicles.</li>
-                  <li>Worked closely with the Safety team to develop and drive adoption of a Cruise-wide high assurance software development process, based off of ISO 26262 Part 6.</li>
-                  <ul>
-                    <li>Developed a coding standard for safety-critical embedded software.</li>
-                    <li>Developed a new documentation strategy and templates which fulfill safety requirements and provide simple, manageable documentation for important design information, leading to improved communication and faster project onboarding.</li>
-                  </ul>
-                  <li>Owned initial bring-up and planning for the system's "root of safety" processor, which housed many of the core safety-related functions in the vehicle.</li>
+                  <li>Working cross-functionally to define and implement safety processes and standards, design and review software architectures, and set future direction to meet safety requirements for autonomous vehicles.</li>
+                  <li>Developing and championing a Cruise-wide high assurance software development process, based off of ISO 26262 Part 6.</li>
+                  <li>Defining C and C++ coding standards for safety-critical embedded software.</li>
+                  <li>Developing new documentation processes and templates which fulfill safety requirements and lead to improved communication and faster project onboarding.</li>
+                  <li>Drove initial bring-up and planning for the system's "root of safety" processor, which houses many of the core safety-related functions in the vehicle.</li>
                   <ul>
                     <li>Led a benchmarking effort working with various teams to determine if using a lower cost, earlier timeline processor variant was feasible.</li>
                   </ul>
-                  <li>Led evaluatation of several safety certified RTOSes and documented our findings, including proposing both a microcontroller and application processor RTOS. Executed purchase of the microcontroller RTOS which now supports multiple devices.</li>
-                  <li>Reviewed the safety architecture and design of several embedded devices &mdash; including doing Failure Modes and Effects Analyses (FMEA) &mdash; and made recommendations for software/hardware changes which saved on costly redesigns.</li>
+                  <li>Led evaluatation of several safety certified RTOSes and documented our findings, including proposing both a microcontroller and application processor RTOS. Executed purchase and bring-up of the microcontroller RTOS.</li>
                   <li>Led the effort to plan and execute a workshop which aimed to align on and develop a more functionally safe software architecture for the core driving stack.</li>
                   <ul>
                     <li>Resulted in creation of a widely cross-functional architecture working group to further develop and align on a safety architecture.</li>
@@ -296,7 +313,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                   <ul class="key_tech_list">
                     <li>C++11</li>
                     <li>ARM Cortex A53</li>
-                    <li>ARM Cortex M4</li>
+                    <li>ARM Cortex M4F</li>
                     <li>NXP PowerPC</li>
                     <li>QNX</li>
                     <li>FreeRTOS</li>
@@ -304,6 +321,7 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                     <li>DDS Pub-Sub</li>
                     <li>Make</li>
                     <li>Bazel</li>
+                    <li>Git</li>
                   </ul>
                 </div>
                 <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
@@ -365,17 +383,21 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 <div class="work_experience_key_tech">
                   <span class="work_experience_key_tech_title">Key Technologies</span>
                   <ul class="key_tech_list">
-                    <li>C++</li>
-                    <li>ARM Cortex A</li>
-                    <li>ARM Cortex M</li>
-                    <li>RTOS</li>
+                    <li>C++03</li>
+                    <li>C99</li>
+                    <li>ARM Cortex M4F</li>
+                    <li>uC/OS II</li>
+                    <li>CAN</li>
+                    <li>UART</li>
+                    <li>SPI</li>
+                    <li>GNSS</li>
+                    <li>Make</li>
+                    <li>Git</li>
                   </ul>
                 </div>
                 <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
                 <ul class="work_experience_description">
-                  <li>Designed and programmed safety critical, embedded systems for commercial drone applications.</li>
-                  <li>Wrote application and driver code in C and C++.</li>
-                  <li>Wrote tooling, test, and build system code in Python and Make.</li>
+                  <li>Designed and programmed safety-critical, real-time embedded systems for commercial drone applications.</li>
                   <li>Spearheaded multiple board bring-ups, starting at application design and specification through to programming,
                     testing, and manufacturing support.</li>
                   <li>Designed and programmed drivers for CAN, SPI, and UART sensors and peripherals.</li>
@@ -406,32 +428,27 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                 <div class="work_experience_key_tech">
                   <span class="work_experience_key_tech_title">Key Technologies</span>
                   <ul class="key_tech_list">
-                    <li>C++</li>
-                    <li>ARM Cortex A</li>
-                    <li>ARM Cortex M</li>
-                    <li>RTOS</li>
+                    <li>C/C++</li>
+                    <li>PIC12/16/18</li>
+                    <li>Eagle CAD</li>
+                    <li>Solidworks</li>
+                    <li>SVN</li>
+                    <li>Git</li>
                   </ul>
                 </div>
                 <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
                 <ul class="work_experience_description">
                   <li>Designed, built, and maintained robots and electronics used for computational neuroscience research.</li>
-                  <li>Worked with graduate students and faculty to meet their research needs.</li>
+                  <li>Programmed and tested firmware for 8-bit and 16-bit PIC microcontrollers, including code for motor control, sensor
+                    integration, and communication.</li>
+                  <li>Designed custom printed circuit boards (PCBs) and built and/or ordered printed circuit assemblies (PCAs). Boards
+                    were designed to meet size, cost, and functional specifications for each project.</li>
+                  <li>Designed custom mechanical components and assemblies using Solidworks CAD software. Components and assemblies were
+                    specified in drawings for precision machining or hand built for one-off testing and prototyping.</li>
                   <li>Tracked and maintained parts inventory, purchase orders, reimbursements, and component and part libraries.</li>
                   <li>Took on the role of system administrator of the lab server, including maintaining Subversion (SVN), MediaWiki, and
                     Bugzilla installations, granting user access, and installing updates and fixes.</li>
-                  <li>Designed custom mechanical components and assemblies using Solidworks CAD software. Components and assemblies were
-                    specified in drawings for precision machining or hand built for one-off testing and prototyping.</li>
-                  <li>Designed custom printed circuit boards (PCBs) and built and/or ordered printed circuit assemblies (PCAs). Boards
-                    were designed to meet size, cost, and functional specifications for each project.</li>
-                  <li>Programmed and tested firmware for 8-bit and 16-bit PIC microcontrollers, including code for motor control, sensor
-                    integration, and communication.</li>
-                  <li>Programmed and tested software for Windows, Mac, and Linux PCs which interfaced with both custom and off-the-shelf
-                    hardware.</li>
-                  <li>Built, installed, and maintained custom embedded Linux installations.</li>
-                  <li>Gave quarterly presentations to the lab on the current status of on-going projects as well as a range of research
-                    subjects including reviews of papers in the fields of neuroscience, computer science, and robotics.</li>
-                  <li>Collaborated with other lab members to solve a range of problems and brainstorm new concepts for robots and research
-                    avenues.</li>      </ul>
+                </ul>
               </div>
             </div>
           </div>
@@ -500,6 +517,138 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
           <h2>
             Skills
           </h2>
+          <div class="skill_item">
+            <span class="skill_name">C++11</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Expert</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">C++17</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Advanced</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">C99</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Advanced</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">RTOS</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Expert</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">Linux</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Advanced</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">ARM Cortex M4</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Expert</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">ARM Cortex A53</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Intermediate</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">Make</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Advanced</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">Bazel</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Intermediate</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">Git</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Advanced</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">ISO 26262</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Advanced</span>
+          </div>
+          <div class="skill_item">
+            <span class="skill_name">Python</span>
+            <span class="skill_rating">
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_filled_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+              <img src="resources/circle_black_24dp.svg" height=12px />
+            </span><br />
+            <span class="skill_rating_desc">Intermediate</span>
+          </div>
         </div>
       </div>
     </div>
