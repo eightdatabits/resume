@@ -10,31 +10,6 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Rokkitt:wght@100;200;300;400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
   <style>
-    /*
-    @font-face {
-      font-family: 'Josefin Sans';
-      font-style: normal;
-      src: url("resources/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
-    }
-
-    @font-face {
-      font-family: 'Lora';
-      font-style: normal;
-      src: url("resources/Lora/Lora-VariableFont_wght.ttf");
-    }
-
-    @font-face {
-      font-family: 'Lora';
-      font-style: italic;
-      src: url("resources/Lora/Lora-Italic-VariableFont_wght.ttf");
-    }
-
-    @font-face {
-      font-family: 'Lora Bold';
-      font-style: normal;
-      src: url("resources/Lora/static/Lora-Bold.ttf");
-    }*/
-
     html {
       font-family: Verdana, sans-serif;
       font-size: 12px;
@@ -43,9 +18,13 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
 
     body {
       background-image: url("resources/5016.png");
-      /*background-size: cover;*/
       background-size: 200px;
       background-color: darkgray;
+    }
+
+    @media print {
+      body {background-image:none; background-color:white;}
+      .work_experience_item {break-inside: avoid;}
     }
 /* Debug
     * {
@@ -58,6 +37,8 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
       padding-bottom: 5px;
       border-bottom: 1px solid gray;
       margin-bottom: 10px;
+      margin-top: 15px;
+      overflow: hidden;
     }
 
     #main {
@@ -69,8 +50,6 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
     #name_block {
       background-color: #153e80;
       padding: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
     }
 
     #name {
@@ -87,41 +66,32 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
       padding-left: 2px;
     }
 
-    #content {
-      display: flex;
-      align-items: stretch;
-    }
-
-    #left_panel {
-      flex: 1;
-      padding: 10px;
-    }
-
-    #right_panel {
-      width: 180px;
+    #personal_info {
+      float: right;
+      top: 0;
+      right: 0;
+      margin: 20px;
+      padding: 20px;
       background-color: #e2edff;
-      padding: 10px;
     }
 
-    #summary {
-      font-size: 13px;
-    }
-
-    .work_experience_item {
+    .personal_info_item {
       display: flex;
+      height: fit-content;
+      padding: 2px;
     }
 
-    .work_experience_dates {
-      width: 80px;
-      color: rgb(121, 121, 121);
+    .personal_info_icon {
+      margin-right: 4px;
     }
 
-    .work_experience_content {
-      flex: 1;
+    #content {
+      padding: 25px;
+      padding-top: 0;
     }
 
     .work_experience_item {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .work_experience_item:last-of-type {
@@ -134,10 +104,15 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
 
     .work_experience_company_name {
       font-weight: 700;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .work_experience_company_location {
+      font-style: italic;
+      float: right;
+    }
+
+    .work_experience_dates {
       font-style: italic;
       float: right;
     }
@@ -219,142 +194,122 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
     .education_location {
       font-style: italic;
     }
-
-    .personal_info_item {
-      display: flex;
-      align-items: center;
-      height: fit-content;
-      padding: 2px;
-    }
-
-    .personal_info_icon {
-      margin-right: 4px;
-    }
-
-    #personal_info_divider {
-      width: 100px;
-    }
-
-    .skill_item {
-      margin-bottom: 15px;
-    }
-
-    .skill_name {
-      font-weight: 500;
-    }
-
-    .skill_rating {
-      float: right;
-    }
-
-    .skill_rating_desc {
-      display: block;
-      text-align: right;
-    }
   </style>
 </head>
 
 <body>
   <div id="main">
+    <div id="personal_info">
+      <div class="personal_info_item">
+        <span class="personal_info_icon"><img src="resources/email_black_24dp.svg" height=16px></span>
+        <span class="personal_info_details"><a href="mailto:liam@eightdatabits.com?subject=Resume">liam@eightdatabits.com</a></span>
+      </div>
+      <div class="personal_info_item">
+        <span class="personal_info_icon"><img src="resources/call_black_24dp.svg" height=16px></span>
+        <span class="personal_info_details">818.434.9103</span>
+      </div>
+      <br />
+      <div class="personal_info_item">
+        <span class="personal_info_icon"><img src="resources/LI-In-Bug.png" height=16px></span>
+        <span class="personal_info_details"><a href="http://www.linkedin.com/in/liambucci">linkedin.com/in/liambucci</a></span>
+      </div>
+      <div class="personal_info_item">
+        <span class="personal_info_icon"><img src="resources/GitHub-Mark-32px.png" height=16px></span>
+        <span class="personal_info_details"><a href="http://www.github.com/eightdatabits">github.com/eightdatabits</a></span>
+      </div>
+      <div class="personal_info_item">
+        <span class="personal_info_icon"><img src="resources/language_black_24dp.svg" height=16px></span>
+        <span class="personal_info_details"><a href="http://www.liambucci.com/">liambucci.com</a></span>
+      </div>
+    </div>
     <div id="name_block">
       <span id="name">Liam Bucci</span><br />
       <span id="title">Embedded Software Engineer</span>
     </div>
     <div id="content">
-      <div id="left_panel">
-        <div id="summary">
-          The challenges of creating new and innovative solutions to complex problems has been a constant motivator in my life; it is why I became an engineer. Robotic systems, in particular, with their complex physics, multitude of interacting systems, and ability to greatly impact the world are some of the most interesting challenges I've ever encountered, and I am excited to tackle those challenges each and every day.
-        </div>
-        <div id="work_experience">
-          <h2>
-            Work Experience
-          </h2>
-          <div class="work_experience_item">
-            <div class="work_experience_dates">
-               Present - <br />
-               June 2020
+      <div id="work_experience">
+        <h2>
+          Work Experience
+        </h2>
+        <div class="work_experience_item">
+          <div class="work_experience_content">
+            <div class="work_experience_heading">
+              <span class="work_experience_company_name">Cruise</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
+              <span class="work_experience_title">Senior Staff Software Engineer</span> <span class="work_experience_dates">June 2020 - Present</span>
             </div>
-            <div class="work_experience_content">
-              <div class="work_experience_heading">
-                <span class="work_experience_company_name">Cruise</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
-                <span class="work_experience_title">Senior Staff Software Engineer</span>
+            <div class="work_experience_details">
+              <div class="work_experience_key_tech">
+                <span class="work_experience_key_tech_title">Key Technologies</span>
+                <ul class="key_tech_list">
+                  <li>C++17</li>
+                  <li>C99</li>
+                  <li>ARM Cortex A53</li>
+                  <li>ARM Cortex R5</li>
+                  <li>GHS u-velOSity</li>
+                  <li>ISO 26262</li>
+                  <li>Git</li>
+                  <li>Make</li>
+                  <li>Bazel</li>
+                </ul>
               </div>
-              <div class="work_experience_details">
-                <div class="work_experience_key_tech">
-                  <span class="work_experience_key_tech_title">Key Technologies</span>
-                  <ul class="key_tech_list">
-                    <li>C++17</li>
-                    <li>C99</li>
-                    <li>ARM Cortex A53</li>
-                    <li>ARM Cortex R5</li>
-                    <li>GHS u-velOSity</li>
-                    <li>ISO 26262</li>
-                    <li>Git</li>
-                    <li>Bazel</li>
+              <div class="work_experience_resp_ach">
+                <span class="work_experience_resp_ach_title">Responsibilities & Achievements</span>
+                <ul class="work_experience_description">
+                  <li>Acted as <i>Program Architect</i> for two model year vehicle programs, where I set the technical direction and roadmap for up to 80+ members of the Embedded Systems (ES) organization.</li>
+                  <ul>
+                    <li>Worked with leaders across the company to align on high level program direction, then bring those milestones into the ES roadmap.</li>
+                    <li>Defined, oversaw, and delivered several major vehicle milestones, enabling early vehicle development and integration.</li>
+                    <li>Led all ES teams in bottoms-up program planning and roadmap alignment.</li>
+                    <li>Worked with cross-functional teams to raise and resolve system and sub-system architecture concerns.</li>
                   </ul>
-                </div>
-                <div class="work_experience_resp_ach">
-                  <span class="work_experience_resp_ach_title">Responsibilities & Achievements</span>
-                  <ul class="work_experience_description">
-                    <li>Acted as <i>Program Architect</i> for two model year vehicle programs, where I set the technical direction and roadmap for up to 80+ members of the Embedded Systems (ES) organization.</li>
-                    <ul>
-                      <li>Worked with leaders across the company to align on high level program direction, then bring those milestones into the ES roadmap.</li>
-                      <li>Defined, oversaw, and delivered several major vehicle milestones, enabling early vehicle development and integration.</li>
-                      <li>Guided all internal ES teams in accomplishing bottoms-up planning and roadmap alignment.</li>
-                    </ul>
-                    <li>Developed and oversaw a new sensor data collection asset, which enabled early sensor derisking with reduced complexity and maintenance effort for ES teams.</li>
-                    <li>Worked cross-functionally to define and implement safety processes and standards, design and review software architectures, and set future direction to meet safety requirements for autonomous vehicles.</li>
-                    <ul>
-                      <li>Developed and championed a Cruise-wide high assurance software development process, based off of ISO 26262 Part 6.</li>
-                      <li>Defined C and C++ coding standards for safety-critical embedded software.</li>
-                      <li>Developed new documentation processes and templates which fulfill safety requirements and lead to improved communication and faster project onboarding.</li>
-                    </ul>
-                    <li>Drove initial bring-up and planning for the system's "root of safety" processor, which houses many of the core safety-related functions in the vehicle.</li>
-                    <ul>
-                      <li>Led a benchmarking effort working with various teams to determine if using a lower cost, earlier timeline processor variant was feasible.</li>
-                      <li>Continued support for this safety system across two vehicle programs.</li>
-                    </ul>
-                    <li>Led evaluation of several safety certified RTOSes and documented our findings, including proposing both a microcontroller and application processor RTOS. Executed purchase and bring-up of the microcontroller RTOS.</li>
-                    <li>Led the effort to plan and execute a workshop which aimed to align on and develop a more functionally safe software architecture for the core driving stack.</li>
-                    <ul>
-                      <li>Resulted in creation of a widely cross-functional architecture working group to further develop and align on a safety architecture.</li>
-                    </ul>
-                    <li>Assisted FuSa team by owning safety analysis of several functions in the system-level functional architecture, which was later used to analyze functional safety of the system, develop technical safety concepts, and drive requirements down into individual components.</li>
-                    <li>Mentored multiple engineers</li>
-                    <li>Supported hiring as a prolific interviewer (2-3 interviews per week), including acting as a <i>Bar Raiser</i> for other teams.</li>
+                  <li>Developed and oversaw a new sensor data collection asset, which enabled early sensor derisking with reduced complexity and maintenance for ES teams.</li>
+                  <li>Worked cross-functionally to define and implement safety processes and standards, design and review software architectures, and set future direction to meet safety requirements for autonomous vehicles.</li>
+                  <ul>
+                    <li>Developed and championed a Cruise-wide high assurance software development process, based off of ISO 26262 Part 6.</li>
+                    <li>Defined C and C++ coding standards for safety-critical embedded software.</li>
+                    <li>Developed new documentation processes and templates which fulfill safety requirements and lead to improved communication and faster project onboarding.</li>
                   </ul>
-                </div>
+                  <li>Drove initial bring-up and planning for the system's "root of safety" processor, which houses many of the core safety-related functions in the vehicle.</li>
+                  <ul>
+                    <li>Led a benchmarking effort working with various teams to determine if using a lower cost, earlier timeline processor variant was feasible.</li>
+                  </ul>
+                  <li>Led evaluation of several safety certified RTOSes and executed the purchase and bring-up of a microcontroller RTOS based on these findings.</li>
+                  <li>Led the effort to plan and execute a Cruise-wide workshop which aimed to align on and develop a more functionally safe software architecture for the core driving stack.</li>
+                  <ul>
+                    <li>Resulted in creation of a widely cross-functional architecture working group to further develop and align on a safety architecture.</li>
+                  </ul>
+                  <li>Assisted FuSa team by owning safety analysis of several functions in the system-level functional architecture, which was later used to analyze functional safety of the system, develop technical safety concepts, and drive requirements down into individual components.</li>
+                  <li>Supported hiring as a prolific interviewer (2-3 interviews per week), including acting as a <i>Bar Raiser</i> for other teams.</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="work_experience_item">
-            <div class="work_experience_dates">
-               June 2020 - <br />
-               Oct 2016
+        </div>
+        <div class="work_experience_item">
+          <div class="work_experience_content">
+            <div class="work_experience_heading">
+              <span class="work_experience_company_name">Zoox</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
+              <span class="work_experience_title">Staff Software Engineer</span> <span class="work_experience_dates">Oct 2016 - June 2020</span>
             </div>
-            <div class="work_experience_content">
-              <div class="work_experience_heading">
-                <span class="work_experience_company_name">Zoox</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
-                <span class="work_experience_title">Staff Software Engineer</span>
+            <div class="work_experience_details">
+              <div class="work_experience_key_tech">
+                <span class="work_experience_key_tech_title">Key Technologies</span>
+                <ul class="key_tech_list">
+                  <li>C++11</li>
+                  <li>ARM Cortex A53</li>
+                  <li>ARM Cortex M4F</li>
+                  <li>NXP PowerPC</li>
+                  <li>QNX</li>
+                  <li>FreeRTOS</li>
+                  <li>CAN</li>
+                  <li>DDS Pub-Sub</li>
+                  <li>Make</li>
+                  <li>Bazel</li>
+                  <li>Git</li>
+                </ul>
               </div>
-              <div class="work_experience_details">
-                <div class="work_experience_key_tech">
-                  <span class="work_experience_key_tech_title">Key Technologies</span>
-                  <ul class="key_tech_list">
-                    <li>C++11</li>
-                    <li>ARM Cortex A53</li>
-                    <li>ARM Cortex M4F</li>
-                    <li>NXP PowerPC</li>
-                    <li>QNX</li>
-                    <li>FreeRTOS</li>
-                    <li>CAN</li>
-                    <li>DDS Pub-Sub</li>
-                    <li>Make</li>
-                    <li>Bazel</li>
-                    <li>Git</li>
-                  </ul>
-                </div>
-                <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
+              <div class="work_experience_resp_ach">
+                <span class="work_experience_resp_ach_title">Responsibilities & Achievements</span>
                 <ul class="work_experience_description">
                   <li>Architected, designed, and programmed safety-critical embedded software for autonomous vehicles.</li>
                   <li>Set technical direction within the team and served as a technical advisor and contributor on projects both within
@@ -395,37 +350,35 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
                     memory requirements.</li>
                   <li>Served as key developer and maintainer of a <code>make</code>-based build system which supported multiple target
                     devices and their associated libraries, RTOSes, toolchains, and CI.</li>
-                  </ul>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="work_experience_item">
-            <div class="work_experience_dates">
-               July 2016 - <br />
-               Oct 2014
+        </div>
+        <div class="work_experience_item">
+          <div class="work_experience_content">
+            <div class="work_experience_heading">
+              <span class="work_experience_company_name">Airware</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
+              <span class="work_experience_title">Senior Software Engineer</span> <span class="work_experience_dates">Oct 2014 - July 2016</span>
             </div>
-            <div class="work_experience_content">
-              <div class="work_experience_heading">
-                <span class="work_experience_company_name">Airware</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
-                <span class="work_experience_title">Senior Software Engineer</span>
+            <div class="work_experience_details">
+              <div class="work_experience_key_tech">
+                <span class="work_experience_key_tech_title">Key Technologies</span>
+                <ul class="key_tech_list">
+                  <li>C++03</li>
+                  <li>C99</li>
+                  <li>ARM Cortex M4F</li>
+                  <li>uC/OS II</li>
+                  <li>CAN</li>
+                  <li>UART</li>
+                  <li>SPI</li>
+                  <li>GNSS</li>
+                  <li>Make</li>
+                  <li>Git</li>
+                </ul>
               </div>
-              <div class="work_experience_details">
-                <div class="work_experience_key_tech">
-                  <span class="work_experience_key_tech_title">Key Technologies</span>
-                  <ul class="key_tech_list">
-                    <li>C++03</li>
-                    <li>C99</li>
-                    <li>ARM Cortex M4F</li>
-                    <li>uC/OS II</li>
-                    <li>CAN</li>
-                    <li>UART</li>
-                    <li>SPI</li>
-                    <li>GNSS</li>
-                    <li>Make</li>
-                    <li>Git</li>
-                  </ul>
-                </div>
-                <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
+              <div class="work_experience_resp_ach">
+                <span class="work_experience_resp_ach_title">Responsibilities & Achievements</span>
                 <ul class="work_experience_description">
                   <li>Designed and programmed safety-critical, real-time embedded systems for commercial drone applications.</li>
                   <li>Spearheaded multiple board bring-ups, starting at application design and specification through to programming,
@@ -444,29 +397,27 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
               </div>
             </div>
           </div>
-          <div class="work_experience_item">
-            <div class="work_experience_dates">
-               Oct 2014 - <br />
-               Feb 2010
+        </div>
+        <div class="work_experience_item">
+          <div class="work_experience_content">
+            <div class="work_experience_heading">
+              <span class="work_experience_company_name">Cognitive Anteater Robotics Laboratory, UC Irvine</span> <span class="work_experience_company_location">Irvine, CA</span><br />
+              <span class="work_experience_title">Senior Development Engineer</span> <span class="work_experience_dates">Feb 2010 - Oct 2014</span>
             </div>
-            <div class="work_experience_content">
-              <div class="work_experience_heading">
-                <span class="work_experience_company_name">Cognitive Anteater Robotics Laboratory, UC Irvine</span> <span class="work_experience_company_location">San Francisco, CA</span><br />
-                <span class="work_experience_title">Senior Development Engineer</span>
+            <div class="work_experience_details">
+              <div class="work_experience_key_tech">
+                <span class="work_experience_key_tech_title">Key Technologies</span>
+                <ul class="key_tech_list">
+                  <li>C/C++</li>
+                  <li>PIC12/16/18</li>
+                  <li>Eagle CAD</li>
+                  <li>Solidworks</li>
+                  <li>SVN</li>
+                  <li>Git</li>
+                </ul>
               </div>
-              <div class="work_experience_details">
-                <div class="work_experience_key_tech">
-                  <span class="work_experience_key_tech_title">Key Technologies</span>
-                  <ul class="key_tech_list">
-                    <li>C/C++</li>
-                    <li>PIC12/16/18</li>
-                    <li>Eagle CAD</li>
-                    <li>Solidworks</li>
-                    <li>SVN</li>
-                    <li>Git</li>
-                  </ul>
-                </div>
-                <span class="work_experience_resp_ach">Responsibilities & Achievements</span>
+              <div class="work_experience_resp_ach">
+                <span class="work_experience_resp_ach_title">Responsibilities & Achievements</span>
                 <ul class="work_experience_description">
                   <li>Designed, built, and maintained robots and electronics used for computational neuroscience research.</li>
                   <li>Programmed and tested firmware for 8-bit and 16-bit PIC microcontrollers, including code for motor control, sensor
@@ -483,201 +434,29 @@ If you have trouble viewing this document you may visit www.liambucci.com to vie
             </div>
           </div>
         </div>
-        <div id="education">
-          <h2>
-            Education
-          </h2>
-          <div class="education_item">
-            <div class="education_left">
-              <span class="education_school">Carnegie Mellon University</span><br />
-              <span class="education_degree">Bachelor of Science, Mechanical Engineering</span>
-            </div>
-            <div class="education_right">
-              <span class="education_location">Pittsburgh, PA</span><br />
-              <span class="education_dates">2003-2007</span>
-            </div>
-          </div>
-          <div class="education_item">
-            <div class="education_left">
-              <span class="education_school">University of California, Irvine (Extension)</span><br />
-              <span class="education_degree">Certificate Program, Embedded Systems Engineering</span>
-            </div>
-            <div class="education_right">
-              <span class="education_location">Irvine, CA</span><br />
-              <span class="education_dates">2011-2012</span>
-            </div>
-          </div>
-        </div>
       </div>
-      <div id="right_panel">
-        <div id="personal_info">
-          <h2>
-            Personal Info
-          </h2>
-          <div class="personal_info_item">
-            <span class="personal_info_icon"><img src="resources/place_black_24dp.svg" height=16px></span>
-            <span class="personal_info_details">
-                1322 Park Ave.<br />
-                Alameda, CA 94501
-            </span>
+      <div id="education">
+        <h2>
+          Education
+        </h2>
+        <div class="education_item">
+          <div class="education_left">
+            <span class="education_school">Carnegie Mellon University</span><br />
+            <span class="education_degree">Bachelor of Science, Mechanical Engineering</span>
           </div>
-          <div class="personal_info_item">
-            <span class="personal_info_icon"><img src="resources/email_black_24dp.svg" height=16px></span>
-            <span class="personal_info_details"><a href="mailto:liam@eightdatabits.com?subject=Resume">liam@eightdatabits.com</a></span>
-          </div>
-          <div class="personal_info_item">
-            <span class="personal_info_icon"><img src="resources/call_black_24dp.svg" height=16px></span>
-            <span class="personal_info_details">818.434.9103</span>
-          </div>
-          <br />
-          <div class="personal_info_item">
-            <span class="personal_info_icon"><img src="resources/LI-In-Bug.png" height=16px></span>
-            <span class="personal_info_details"><a href="http://www.linkedin.com/in/liambucci">linkedin.com/in/liambucci</a></span>
-          </div>
-          <div class="personal_info_item">
-            <span class="personal_info_icon"><img src="resources/GitHub-Mark-32px.png" height=16px></span>
-            <span class="personal_info_details"><a href="http://www.github.com/eightdatabits">github.com/eightdatabits</a></span>
-          </div>
-          <div class="personal_info_item">
-            <span class="personal_info_icon"><img src="resources/language_black_24dp.svg" height=16px></span>
-            <span class="personal_info_details"><a href="http://www.liambucci.com/">liambucci.com</a></span>
+          <div class="education_right">
+            <span class="education_location">Pittsburgh, PA</span><br />
+            <span class="education_dates">2003-2007</span>
           </div>
         </div>
-        <div id="skills">
-          <h2>
-            Skills
-          </h2>
-          <div class="skill_item">
-            <span class="skill_name">C++11</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Expert</span>
+        <div class="education_item">
+          <div class="education_left">
+            <span class="education_school">University of California, Irvine (Extension)</span><br />
+            <span class="education_degree">Certificate Program, Embedded Systems Engineering</span>
           </div>
-          <div class="skill_item">
-            <span class="skill_name">C++17</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Advanced</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">C99</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Advanced</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">RTOS</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Expert</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">Linux</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Advanced</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">ARM Cortex M/R</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Expert</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">ARM Cortex A</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Intermediate</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">Make</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Advanced</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">Bazel</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Intermediate</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">Git</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Advanced</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">ISO 26262</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Advanced</span>
-          </div>
-          <div class="skill_item">
-            <span class="skill_name">Python</span>
-            <span class="skill_rating">
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_filled_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-              <img src="resources/circle_black_24dp.svg" height=12px />
-            </span><br />
-            <span class="skill_rating_desc">Intermediate</span>
+          <div class="education_right">
+            <span class="education_location">Irvine, CA</span><br />
+            <span class="education_dates">2011-2012</span>
           </div>
         </div>
       </div>
